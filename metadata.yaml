@@ -1,5 +1,5 @@
 homepage: "https://www.semrush.com/impacthero/"
 documentation: "https://www.semrush.com/kb/1081-impact-hero"
 versions:
-  - sha: 3183cb39df47171a022384d23cb1f01e37d81f40
+  - sha: 8e8a8b71c8417ac5f24051f31ab36c1c4c739d6f
     changeNotes: Initial release
