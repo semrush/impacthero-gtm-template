@@ -53,6 +53,7 @@ ___SANDBOXED_JS_FOR_WEB_TEMPLATE___
 const createArgumentsQueue = require('createArgumentsQueue');
 const setInWindow = require('setInWindow');
 const getTimestampMillis = require('getTimestampMillis');
+const encodeUriComponent = require('encodeUriComponent');
 const injectScript = require('injectScript');
 
 const cat = createArgumentsQueue('cat', 'cat.q');
@@ -61,7 +62,7 @@ setInWindow('cat.l', getTimestampMillis(), false);
 cat('create', data.campaignId);
 cat('send', 'pageview');
 
-const url = 'https://scatec.io/t/app.js?id=' + data.campaignId + '&mode=gtm-template';
+const url = 'https://scatec.io/t/app.js?id=' + encodeUriComponent(data.campaignId) + '&mode=gtm-template';
 injectScript(url, data.gtmOnSuccess, data.gtmOnFailure, url);
 
 
